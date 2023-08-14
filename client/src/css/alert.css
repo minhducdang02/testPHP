@@ -1,0 +1,78 @@
+/* ---------------alert----------------- */
+.alert{
+    position: fixed;
+    right: 0%;
+    top: 15%;
+    width: 15%;
+    z-index: 1;
+}
+.alert > .main{
+    width: 100%;
+    margin-bottom: 10px;
+    animation-name: alert-show;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+.alert > .success{
+    background-color: var(--success-opacity);
+    border-left: 3px solid var(--success);
+}
+.alert > .error{
+    background-color: var(--error-opacity);
+    border-left: 3px solid var(--error);
+}
+.alert > .waitting{
+    background-color: var(--alert-opacity);
+    border-left: 3px solid var(--alert);
+}
+.alert > .main > .title{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    color: var(--font);
+}
+.alert > .main > .title > i{
+    margin-right: 10px;
+}
+.alert .success i{
+    color: var(--success);
+}
+.alert .waitting i{
+    color: var(--alert);
+}
+.alert .error i{
+    color: var(--error);
+}
+.alert > .main > .process{
+    width: 100%;
+    height: 3px;
+    animation-name: process;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+.alert > .waitting > .process{
+    background-color: var(--alert);
+}
+.alert > .success > .process{
+    background-color: var(--success);
+}
+.alert > .error > .process{
+    background-color: var(--error);
+}
+@keyframes process{
+    0%{width: 100%;}
+    100%{width: 0%;}
+}
+@keyframes alert-show{
+    0%{transform: translateX(300px);}
+    25%{transform: translateX(-20px);}
+    50%{transform: translateX(-10px);}
+    100%{transform: translateX(-15px);}
+}
+@keyframes alert-hide{
+    0%{transform: translateX(-15px);}
+    25%{transform: translateX(-10px);}
+    50%{transform: translateX(-20px);}
+    100%{transform: translateX(300px);}
+}
+/* ------------------------------------ */

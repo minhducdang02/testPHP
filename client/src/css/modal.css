@@ -1,0 +1,194 @@
+/* --------------modal login-out----------------- */
+.modal{
+    position: fixed;
+    z-index: 2;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 40%;
+    display: inline;
+    visibility: hidden;
+}
+.modal .main{
+    display: inline-block;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    background-color: var(--product);
+    box-shadow: 1px 1px 8px 0 var(--dark-header);
+    animation-name: modal-show;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.modal .main{
+    padding-bottom: 10px;
+}
+.modal .main form{
+    display: inline-block;
+    width: 60%;
+    text-align: left;
+    padding: 10px;
+}
+.modal .main form .label{
+    margin: 10px 0;
+}
+.modal .main input[type='text'],
+.modal .main input[type='email'],
+.modal .main input[type='password']
+{
+    padding: 10px;
+    width: 100%;
+}
+.modal .main input[type='checkbox']{
+    margin-right: 10px;
+}
+.modal > .main .show-pass{
+    display: flex;
+    align-items: center;
+    text-align: left;
+    margin-left: 0;
+}
+.modal > .main > .title{
+    padding: 10px;
+    text-align: left;
+    background-color: var(--dark-header);
+    color: var(--font);
+    align-items: center;
+    display: flex;
+}
+.modal .main .title > i{
+    position: absolute;
+    right: 3%;
+    font-size: 160%;
+    color: var(--error);
+}
+.modal .main form > .btn{
+    width: 100%;
+    background-color: var(--dark-header);
+    color: var(--font);
+}
+.modal .main .btn{
+    padding: 10px 20px;
+    font-size: 100%;
+    background-color: var(--font2);
+}
+.modal .main .or{
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+.modal .main > .btn:hover,.modal .main > .btn:active{
+    cursor: pointer;
+    box-shadow: 1px 1px 8px 1px var(--dark-header);
+}
+.modal .main .title > i:hover,.modal .main .title > i:active{
+    cursor: pointer;
+}
+@keyframes modal-show{
+    0%{transform: translate(-50%,-100%);}
+    100%{transform: translate(-50%,25%);}
+}
+@keyframes modal-hide{
+    0%{transform: translate(-50%,25%);}
+    100%{transform: translate(-50%,-100%);}
+}
+/* --------modal products details---------- */
+.modal .main .product{
+    display: flex;
+    align-items: top;
+    margin: 0 auto;
+    width: 90%;
+    justify-content: center;
+}
+.modal .main .product img{
+    width: 30%;
+    height: 50%;
+}
+.modal .main .product .product-info{
+    margin-left: 5%;
+    margin-top: 5%;
+    text-align: center;
+}
+.modal .main .product .product-info .title{
+    font-size: 150%;
+}
+.modal .main .product .product-info .price{
+    margin: 10px 0;
+}
+.modal .main .product .product-info button{
+    padding: 10px;
+    margin-top: 50px;
+    visibility: unset;
+    width: 100%;
+    font-size: 110%;
+}
+.modal .main .product .amount{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal .main .product .product-info i{
+    margin: 0 10px;
+}
+.fa-circle-minus{
+    color: red;
+}
+.fa-circle-plus
+{
+    color: green;
+}
+.modal form .type,.modal form .size{
+    justify-content: center;
+}
+.modal .product-detail form .label{
+    font-weight: bold;
+}
+.modal .product-detail form{
+    width: 90%;
+    text-align: center;
+}
+/* ---------------------------------------- */
+/* -------------------MODAL ORDER DETAIL----- */
+.modal .order-detail{
+    width: 150%;
+    display: inline-block;
+}
+.modal .row{
+    display: flex;
+}
+.modal .row form{
+    width: 60%;
+}
+.modal .row .product-info{
+    width: 40%;
+    margin-top: 10px;
+    height: 300px;
+    overflow-y: scroll;
+}
+.modal .order-detail .product-info .container{
+    display: flex;
+    justify-content:left;
+    align-items: center;
+}
+.modal .order-detail .product-info .container img{
+    width: 50px;
+}
+.modal .order-detail .product-info .container .info{
+    margin-left: 10px;
+}
+.modal .order-detail .name{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.modal .order-detail .bill{
+    padding: 10px 0;
+    font-weight: bold;
+}
+/* --------------- */
+.flex{
+    display: flex;
+    justify-content: space-around;
+}
+.admin_top{
+    background-color: brown;
+}
